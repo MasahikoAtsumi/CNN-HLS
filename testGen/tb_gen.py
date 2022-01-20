@@ -157,15 +157,15 @@ if __name__ == "__main__":
     test(args.target_layer, args.howmany)
 
     # ---extract parameters---
-    # keys = list( net.state_dict().keys() )
-    # k_id = 0
-    # for param in net.parameters():
-    #     save_data = param.detach().numpy()
-    #     save_name = keys[k_id]
-    #     k_id += 1
-    #     if args.saveastxt == 1:
-    #         create_dir('.\\txt\\')
-    #         np.savetxt('.\\txt\\' + str(save_name)+'.txt', save_data.flatten(), delimiter=',', fmt ='%.5f')
-    #     if args.saveasnpy == 1:
-    #         create_dir('.\\npy\\')
-    #         np.save(   '.\\npy\\' + str(save_name), save_data)
+    keys = list( net.state_dict().keys() )
+    k_id = 0
+    for param in net.parameters():
+        save_data = param.detach().numpy()
+        save_name = keys[k_id]
+        k_id += 1
+        if args.saveastxt == 1:
+            create_dir('.\\txt\\')
+            np.savetxt('.\\txt\\' + str(save_name)+'.txt', save_data.flatten(), delimiter=',', fmt ='%.5f')
+        if args.saveasnpy == 1:
+            create_dir('.\\npy\\')
+            np.save(   '.\\npy\\' + str(save_name), save_data)
