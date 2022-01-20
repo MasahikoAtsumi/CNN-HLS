@@ -116,7 +116,7 @@ int main()
 		#endif
 
 		#ifdef relu
-		string dir_path("\\Users\\masah\\project\\cnn_test\\python\\relu\\iotxt\\");
+		string dir_path("path\\relu\\iotxt\\");
 		#endif
 
 		string in_name("/in_target_");
