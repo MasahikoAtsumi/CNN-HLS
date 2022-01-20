@@ -80,11 +80,11 @@ int main()
 
   // load parameters ----------------------------------------------------
 	#ifdef fivebyfive
-	char weight_file[256] = "\\Users\\masah\\project\\cnn_test\\python\\fivebyfive\\txt\\features.0.weight.txt";
-	char bias_file[256]   = "\\Users\\masah\\project\\cnn_test\\python\\fivebyfive\\txt\\features.0.bias.txt";
+	char weight_file[256] = "path\\fivebyfive\\txt\\features.0.weight.txt";
+	char bias_file[256]   = "path\\fivebyfive\\txt\\features.0.bias.txt";
 	#else
-	char weight_file[256] = "\\Users\\masah\\project\\cnn_test\\python\\threebythree\\txt\\features.0.weight.txt";
-	char bias_file[256]   = "\\Users\\masah\\project\\cnn_test\\python\\threebythree\\txt\\features.0.bias.txt";
+	char weight_file[256] = "path\\threebythree\\txt\\features.0.weight.txt";
+	char bias_file[256]   = "path\\threebythree\\txt\\features.0.bias.txt";
 	#endif
 
 	#ifdef HLS
@@ -104,15 +104,15 @@ int main()
 	for( int id_in = 0; id_in < test_num; id_in++){
 		string id_num = std::to_string(id_in);
 		#ifdef fivebyfive
-		string dir_path("\\Users\\masah\\project\\cnn_test\\python\\fivebyfive\\iotxt\\");
+		string dir_path("path\\fivebyfive\\iotxt\\");
 		#endif
 
 		#ifdef threebythree
-		string dir_path("\\Users\\masah\\project\\cnn_test\\python\\threebythree\\iotxt\\");
+		string dir_path("path\\threebythree\\iotxt\\");
 		#endif
 
 		#ifdef maxpool
-		string dir_path("\\Users\\masah\\project\\cnn_test\\python\\maxpool\\iotxt\\");
+		string dir_path("path\\maxpool\\iotxt\\");
 		#endif
 
 		#ifdef relu
