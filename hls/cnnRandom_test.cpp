@@ -4,7 +4,6 @@
 #include <string>
 #include <cstring>
 #include <vector>
-#include <glob.h>
 #include <random>
 
 #include "./load_from_txt.h"
