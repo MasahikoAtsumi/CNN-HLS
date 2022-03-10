@@ -6,24 +6,12 @@
 
 // #define HLS
 #include "./func/slide_func.h"
-#ifdef HLS
-#include "./func/conv.h"
-#include "./func/maxpool.h"
-#include "./func/relu.h"
-#include "./func/w_load_wb.h"
-#include "./func/line_load.h"
-#include "./func/out_line_load.h"
-#include "./func/out_line_wb.h"
-#include "./func/get_out_index.h"
-#else
-#include "./func/slide_func.h"
 #include "./func/conv.h"
 #include "./func/w_load_wb.h"
 #include "./func/line_load.h"
 #include "./func/out_line_load.h"
 #include "./func/out_line_wb.h"
 #include "./func/get_out_index.h"
-#endif
 
 typedef float DTYPE;
 #define line_row  7
